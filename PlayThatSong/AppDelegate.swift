@@ -41,6 +41,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    // MARK: WatchKit
+    
+    func application(application: UIApplication!, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]!, reply: (([NSObject : AnyObject]!) -> Void)!) {
+        // Gives us access to the info that we passed in the Interfacecontroller. It will store the information in the WatchKitInfo Class
+        
+        // Initiate an instance of WatchKitInfo and pass the required information
+        let watchKitInformation = WatchKitInfo(playerDictionary: userInfo, reply: reply)
+        
+        // Any class or controller listening for "WatchKitDidMakeRequest" will get access to the object 'watchKitInformation'
+        NSNotificationCenter.defaultCenter().postNotificationName("WatchKitDidMakeRequest", object: watchKitInformation)
+        
+        reply(["Working" : "Now"])
+    }
+    
 }
-

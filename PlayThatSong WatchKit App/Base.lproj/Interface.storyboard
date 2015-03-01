@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6750" systemVersion="14D87h" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="PlayThatSong_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="136" height="48" alignment="left" text="Song" textAlignment="center" numberOfLines="0" id="Z0b-Ld-PhR">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="font" type="system" pointSize="13"/>
+                        </label>
+                        <group width="1" alignment="left" verticalAlignment="center" radius="20" id="u0U-i9-ymK">
+                            <items>
+                                <button width="50" alignment="left" title="&lt;" id="XBn-Tc-B63">
+                                    <color key="backgroundColor" red="0.7764490223463687" green="0.44427779056841682" blue="0.018930015927127574" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="boldSystem" pointSize="20"/>
+                                    <connections>
+                                        <action selector="previousSongButtonPressed" destination="AgC-eL-Hgc" id="QT8-I4-k05"/>
+                                    </connections>
+                                </button>
+                                <button width="50" alignment="right" title="&gt;" id="xMl-Oo-oOG">
+                                    <color key="backgroundColor" red="0.77644902230000001" green="0.4442777906" blue="0.018930015929999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="boldSystem" pointSize="20"/>
+                                    <connections>
+                                        <action selector="nextSongButtonPressed" destination="AgC-eL-Hgc" id="ACq-xd-m2f"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Play" id="8GS-Go-wDN">
+                            <color key="backgroundColor" red="0.77644902230000001" green="0.4442777906" blue="0.018930015929999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="15"/>
+                            <connections>
+                                <action selector="playSongButtonPressed" destination="AgC-eL-Hgc" id="vpc-PB-sZZ"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <color key="backgroundColor" red="1" green="0.56824590146247778" blue="0.0097190807669369494" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="songTitleLabel" destination="Z0b-Ld-PhR" id="KXK-Hk-67H"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>
